@@ -10,8 +10,8 @@ function fmtN(n){return(n<0?"-":"+")+fmt(n);}
 const today=()=>new Date().toISOString().split("T")[0];
 const thisMonth=()=>new Date().toISOString().slice(0,7);
 export default function HashOps() {
-  const [sbUrl,setSbUrl]=useState(()=>localStorage.getItem("sb_url")||"");
-  const [sbKey,setSbKey]=useState(()=>localStorage.getItem("sb_key")||"");
+  const [sbUrl,setSbUrl]=useState("");
+  const [sbKey,setSbKey]=useState("");
   const [connected,setConnected]=useState(false);
   const [connecting,setConnecting]=useState(false);
   const [tab,setTab]=useState("dashboard");
